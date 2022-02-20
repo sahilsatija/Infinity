@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props){
+  const { history } = props;
+
+  const handleClick = () => {
+    history.push("/home");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +15,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
+      <button onClick={handleClick}>Click here to navigate</button>
       </header>
     </div>
   );

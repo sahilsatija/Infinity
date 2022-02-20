@@ -3,10 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { history } from './history';
 
+const Home = ({ history }) => {
+  return (
+    <div>
+      Home Component
+      <button onClick={() => history.goBack()}>Back</button>
+    </div>
+    
+  )
+}
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter history={history}>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/home" component={Home} />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
