@@ -2,19 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { history } from './history';
 
-const Home = ({ history }) => {
-  return (
-    <div>
-      Home Component
-      <button onClick={() => history.goBack()}>Back</button>
-    </div>
-    
-  )
-}
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter history={history}>
