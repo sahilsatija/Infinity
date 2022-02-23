@@ -1,5 +1,5 @@
 import React from 'react';
-import AutoComplete from './components/AutoComplete/AutoComplete';
+import { AutoComplete, Pagination } from './components';
 
 const Home = () => {
   
@@ -7,6 +7,7 @@ const Home = () => {
     <>
     <div>Home Component</div>
     <AutoComplete />
+    <Pagination />
       {/* <button onClick={() => history.goBack()}>Back</button> */}
     
     </>
