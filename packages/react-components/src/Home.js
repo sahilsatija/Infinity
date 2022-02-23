@@ -1,5 +1,5 @@
 import React from 'react';
-import AutoComplete from './components/AutoComplete';
+import AutoComplete from './components/AutoComplete/AutoComplete';
 
 const Home = () => {
   
